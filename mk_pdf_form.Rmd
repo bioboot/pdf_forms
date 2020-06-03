@@ -1,0 +1,62 @@
+---
+title: "Generate A Fillable Form From Rmarkdown"
+author: "Barry Grant (PID 911)"
+date: "6/2/2020"
+header-includes:
+   - \usepackage{hyperref}
+output:
+    pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!-- This sets up the PDF form question area style -->
+\kvsetkeys{Field}{charsize=10pt, bordercolor=, backgroundcolor={.93 .93 .99}, color={0 0 1}, donotspellcheck}
+
+\renewcommand\DefaultOptionsofText{multiline=true, width=\linewidth, height=1in}
+<!-- End style setup -->
+
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Q & A text box 
+
+**Q1** Here is a first question?
+
+\TextField[name=Q1]{}
+
+**Q2** Another question here?
+
+\TextField[name=Q2]{}
+
+> **Q3.** What about some checkbox action?
+
+\CheckBox[name=Q3.1]{Option 1}
+\CheckBox[name=Q3.2]{Option 2}
+\CheckBox[name=Q3.3]{Option 3}
+
+
+>**Q5** Answer by picking from a dropdown menu of options?
+
+\ChoiceMenu[combo, name=Q4, width=2cm, default=Belfast]{}{Los Angels, Belfast, Newry, Berlin, San Diego, London}  
+
+
+## Including plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
