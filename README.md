@@ -6,7 +6,9 @@ We can also use the [`staplr` package](https://github.com/pridiltal/staplr) to e
 
 I find the `hyperref` documentation to be rather poor. One useful resource for paramaters can be [found here](https://www.tug.org/applications/hyperref/manual.html#x1-470006). Needless to say the styling and LaTex settings for hyperref in these example docs has been hard earned. 
 
-Quick demo of how to make PDF forms with Rmarkdown see the input file `mk_pdf_form.Rmd` and coresponding output `mk_pdf_form.pdf`.
+For a quick demo of how to make PDF forms with Rmarkdown see the input file `mk_pdf_form.Rmd` and coresponding output [`mk_pdf_form.pdf`](https://github.com/bioboot/pdf_forms/blob/master/mk_pdf_form.pdf).
 
-To extract and/or set form responses see `extract_form_data.R`.
+To extract and/or set form responses see the repo file  `extract_form_data.R`.
+
+![](example_output.png)
 
