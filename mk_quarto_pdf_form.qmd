@@ -57,3 +57,21 @@ Some helpful text hint. Note collapse does not work for PDF or Word.
 \ChoiceMenu[combo, name=Q4, width=2cm, default=Belfast]{}{Los Angels, Belfast, Newry, Berlin, San Diego, London}  
 
 
+
+Example for include file:
+
+:::{.callout-note}
+## Instructions
+Save this document to your computer and open it in a PDF viewer such as Preview (mac) or Adobe Acrobat (PC and Linux). Be sure to add your name and UC San Diego personal identification number (PID) before answering all questions in the space provided.  
+
+
+<!-- Student ID info block -->
+\begin{tabular}{lll}
+ Student Name &  UCSD PID  & UCSD Email \\
+\TextField[name=Name, width=6cm, height=0.6cm]{}  & \TextField[name=PID, width=3.5cm, height=0.6cm]{} & \TextField[name=Email, width=4.51cm, height=0.6cm]{}
+\end{tabular}
+<!-- End student ID info block (move these to an include file) -->
+
+:::
+
+
